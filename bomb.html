@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="bomb.js"></script>
+        <link rel="stylesheet" href="bomb.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bomb</title>
+    </head>
+    <body>
+
+        <div id="setup">
+            <h1>Setup game</h1>
+            <div>
+                <label for="defuseCode">DEFUSE CODE:</label>
+                <input type="number" id="setDefuseCode" name="defuseCode" min="1" max="9999" value="0000" onchange="checkValue(this)">
+            </div>
+            <div>
+                <label for="setDefuseTime">DEFUSE TIME:</label>
+                <input type="time" id="setDefuseTime" name="setDefuseTime" min="00:00" max="60:00" value='00:00'>
+            </div>
+            <button class="btn" onclick="readyToStart()">OK</button>
+        </div>
+
+        <div id="main">
+            <table>
+                <tr>
+                    <h2 id="showDefuseTime">
+                        <span id="defuseMinutes"></span>:<span id="defuseSeconds"></span>
+                    </h2>
+                </tr>
+                <tr>
+                    <h2 id="showInsertedCode"><span id="insertedCode">____</span></h2>
+                </tr>
+            </table>
+            <div id="buttonPanel">
+                <button onclick="setNumber(this)" id="one" value="1">1</button>
+                <button onclick="setNumber(this)" id="two" value="2">2</button>
+                <button onclick="setNumber(this)" id="three" value="3">3</button>
+                <br>
+                <button onclick="setNumber(this)" id="four" value="4">4</button>
+                <button onclick="setNumber(this)" id="five" value="5">5</button>
+                <button onclick="setNumber(this)" id="six" value="6">6</button>
+                <br>
+                <button onclick="setNumber(this)" id="seven" value="7">7</button>
+                <button onclick="setNumber(this)" id="eight" value="8">8</button>
+                <button onclick="setNumber(this)" id="nine" value="9">9</button>
+                <br>
+                <button onclick="start(this)" id="start">Start</button>
+                <button onclick="setNumber(this)" id="zero" value="0">0</button>        
+                <button onclick="deleteButton()" id="deleteButton">DEL</button>
+                <br>
+            </div>
+    
+            <div id="finishModal">
+                <div id="gameFinalStatus"></div>
+                <div id="action">
+                    <button onclick="playAgain(this)" class="btn playAgain" id="btnPlayAgain">Play Again</button>
+                    <button onclick="configure(this)" class="btn configure" id="btnConfigure">Configure game</button>
+                </div>
+
+            </div>
+    
+            <div id="init"></div>
+        </div>
+    </body>
+</html>

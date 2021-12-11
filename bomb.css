@@ -1,0 +1,198 @@
+body{
+    background-color: #424242;
+}
+#setup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    font-family: 'digital';
+    font-size: 3em;
+    font-weight: 100;
+    color: lime;
+}
+#setup > .btn {
+    width: 20vw;
+}
+#setup > div {display: flex;justify-content: space-between;align-items: center;width: 100%;}
+#setup > div > input {
+    width: 20vw;
+    padding: 0.1em;
+    font-size: 0.8em;
+    color: lime;
+    text-align: center;
+    min-width: 20vw;
+    margin: 0;
+}
+#buttonPanel{
+    text-align: center;
+    margin-top: 1em;
+}
+#buttonPanel > button {
+    min-width: 15vw;
+    min-height: 15vh;
+    border: 4px solid #10fa10;
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    font-family: "digital";
+}
+.okButton{
+    border: aqua;
+}
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero{
+    padding: 3vh;
+    margin: 0.1rem;
+}  
+#ok, #deleteButton{
+    padding: 1.51rem;
+}
+#showDefuseTime {
+    width: 50vw;
+    margin: auto;
+    background-color: black;
+    color: #ff3d00;
+    font-size: 3em;
+    letter-spacing: 0.9em;
+    text-align: center;
+    text-indent: 0.9em;
+    font-family: "digital";
+    font-weight: 200;
+}
+
+#showInsertedCode {
+    width: 50vw;
+    margin: auto;
+    background-color: black;
+    color: lime;
+    font-size: 3em;
+    letter-spacing: 0.9em;
+    text-align: center;
+    text-indent: 0.9em;
+    font-family: "digital";
+    font-weight: 200;
+}
+
+.btnStartDisabled { 
+    border-color: grey !important;
+    color: grey !important;
+}
+
+#finishModal {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#gameFinalStatus {
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    font-family: 'army';
+}
+
+#action {
+    display: flex;
+    justify-content: center;
+}
+#action > button {
+    padding: 10px;
+    margin: auto;
+    min-width: 30vw;
+}
+
+.btn {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #06ef23 0, #238911 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.playAgain {
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+}
+.playAgain:focus {
+box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.playAgain:hover {
+box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+transform: translateY(-2px);
+}
+
+.playAgain:active {
+box-shadow: #3c4fe0 0 3px 7px inset;
+transform: translateY(2px);
+}
+
+#Configure
+.configure {
+    background-image: radial-gradient(100% 100% at 100% 0, #25e652 0, #2efc5a 100%);
+}
+.configure:focus {
+box-shadow: #06f246 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.configure:hover {
+box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #26fa1b 0 -3px 0 inset;
+transform: translateY(-2px);
+}
+
+.configure:active {
+box-shadow: #08eb31 0 3px 7px inset;
+transform: translateY(2px);
+}
+
+.tWin {
+    color: red;
+    
+}
+.ctWin {
+    color: #7aafff;
+}
+@font-face {
+    font-family: 'digital';
+    src: URL('assets/digital.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'army';
+    src: URL('assets/army.ttf') format('truetype');
+}
